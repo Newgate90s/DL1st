@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import *
 
-
 from tkinter import ttk
 from tkinter.scrolledtext import *
 from SummerTime import SummerTime
@@ -17,7 +16,7 @@ window.config(background='black')
 
 style = ttk.Style(window)
 
-style.configure('lefttab.Tnotebook', tabposition='wn')
+style.configure('lefttab.TNotebook', tabposition='wn')
 
 tab_control = ttk.Notebook(window, style='lefttab.TNotebook')
 
@@ -46,8 +45,8 @@ def summer_time():
     summer_all = summer_all + summerTime.luhn_analysis(parser_config, 2)
     summer_all = summer_all + summerTime.lsa_analysis(parser_config, 2)
     scrubbed = []
-    for sentance in summer_all:
-        concat = str(sentance) + "\n\n\n"
+    for sentence in summer_all:
+        concat = str(sentence) + "\n\n\n"
         concat.replace("", "{")
         concat.replace("", "}")
         scrubbed.append(concat)
