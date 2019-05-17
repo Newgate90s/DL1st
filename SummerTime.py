@@ -1,5 +1,5 @@
 class SummerTime:
-    def lex_rank_analysis(self, parser_configuration, number_of_lines_to_update):
+    def lex_rank_analysis(self, parser_configuration, number_of_lines_to_output):
         from sumy.summarizers.lex_rank import LexRankSummarizer
         summarizer = LexRankSummarizer()
         summarization_result = summarizer(parser_configuration.document, number_of_lines_to_output)

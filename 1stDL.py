@@ -5,7 +5,6 @@ from tkinter import ttk
 from tkinter.scrolledtext import *
 from SummerTime import SummerTime
 
-
 window = tk.Tk()
 
 window.title("Textatron")
@@ -20,7 +19,7 @@ style.configure('lefttab.TNotebook', tabposition='wn')
 
 tab_control = ttk.Notebook(window, style='lefttab.TNotebook')
 
-tab_main  = ttk.Frame(tab_control)
+tab_main = ttk.Frame(tab_control)
 
 tab_control.add(tab_main, text='Mission Control')
 
@@ -54,17 +53,17 @@ def summer_time():
     print("\nAbout to print summer all results\n")
     print(summer_all)
 
-    label_text_to_summarize = Label(tab_main, text='Enter Text to Summarize', padx=5, pady=5)
-    label_text_to_summarize.grid(row=1, column=0)
-    entry = ScrolledText(tab_main, height=30)
-    entry.grid(row=2, column=0, columnspan=5, padx=5, pady=5)
+label_text_to_summarize = Label(tab_main, text='Enter Text to Summarize', padx=5, pady=5)
+label_text_to_summarize.grid(row=1, column=0)
+entry = ScrolledText(tab_main, height=30)
+entry.grid(row=2, column=0, columnspan=5, padx=5, pady=5)
 
-    button_run = Button(tab_main, text='Invoke Tex-A-Tron', command=summer_time, width=22, bg='#25d366', fg='#fff')
-    button_run.grid(row=4, collumn=0, padx=10, pady=10)
+button_run = Button(tab_main, text='Invoke Tex-A-Tron', command=summer_time, width=22, bg='#25d366', fg='#fff')
+button_run.grid(row=4, column=0, padx=10, pady=10)
 
-    output_display = ScrolledText(tab_main)
-    output_display.grid(row=9, column=0, columnspan=5, padx=5, pady=5)
+output_display = ScrolledText(tab_main)
+output_display.grid(row=9, column=0, columnspan=5, padx=5, pady=5)
 
-    window.mainloop()
+window.mainloop()
 
 
